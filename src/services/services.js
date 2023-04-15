@@ -201,7 +201,7 @@ export const {
   useGetAlladvtQuery,
   useGetAdvtCommentsQuery,
   useRegisterUserMutation,
-  useLoginMutation,
+  useLoginUserMutation,
   useGetCurrentUserMutation,
   useRefreshTokenMutation,
   useGetCurrentUserAdvtQuery,

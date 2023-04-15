@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import { useLoginMutation } from '../../services/services';
+import { useLoginUserMutation } from '../../services/services';
 import Footer from '../modal/footer';
 import FullLogo from './icons/skypro.png'
 import * as S from './styledLogin'
@@ -9,7 +9,7 @@ import { GlobalStyle, Wrapper } from './globalStyles';
 
 const Login = ()=>
 {
-    const [login, {data}] =useLoginMutation(); 
+    const [login, {data}] =useLoginUserMutation(); 
     const [password, setPassword] = useState('')   
     const [email, setEmail] = useState('')
     const navigate = useNavigate();
