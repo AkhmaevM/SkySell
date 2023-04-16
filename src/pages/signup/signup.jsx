@@ -20,7 +20,7 @@ import * as S from './styledSignUp'
     const navigate = useNavigate();
     const [registerUser, { data }] = useRegisterUserMutation();
 
-    const handleRegister = (e) => {
+    const handleSignUp = (e) => {
         e.preventDefault();
         if (password === repeatPassword) {
 
@@ -86,7 +86,7 @@ import * as S from './styledSignUp'
                             <S.Input type="text" name="first-last" id="first-last" placeholder="Фамилия (необязательно)" onChange={handleLastNameChange} />
                             <S.Input type="text" name="city" id="city" placeholder="Город (необязательно)" onChange={handleCityChange} />
                             <S.Input type="phone" name="phone" id="phone" placeholder="Телефон (необязательно)" onChange={handlePhoneChange} />
-                            <S.ButtonSignup onClick={handleRegister} id="btnSignUp">Зарегистрироваться</S.ButtonSignup>
+                            <S.ButtonSignup onClick={handleSignUp} id="btnSignUp">Зарегистрироваться</S.ButtonSignup>
                         </S.LoginForm>
                     </S.Block>
                 </S.SignUpWrapper>

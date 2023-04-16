@@ -73,7 +73,7 @@ const Login = ()=>
                                 Войти
                             </S.SignIn>
                             
-                            <NavLink to={`/registaration`} replace>
+                            <NavLink to={'/signup'} replace>
                                 <S.SignUp id="btnSignUp" >
                                     Зарегистрироваться
                                     </S.SignUp>

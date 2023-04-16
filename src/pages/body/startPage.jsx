@@ -38,7 +38,7 @@ export const StartPage = () =>{
         <S.Container>
             <S.Header>
             <S.Navigation>
-                    <NavLink replace to={localStorage.user_register_id ? `/profile` : `/signup`} >
+                    <NavLink to={localStorage.user_register_id ? '/signup' : '/login'} replace>
                         <S.HeaderButtonEnter>Вход в личный кабинет</S.HeaderButtonEnter>
                     </NavLink>
                 </S.Navigation>

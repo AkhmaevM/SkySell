@@ -1,7 +1,7 @@
 import {GlobalStyle, Wrapper} from './globalStyle'
 import { StartPage } from './startPage';
 
-export  const Body = () => {
+const Body = () => {
   return (
     <>
       <GlobalStyle />
