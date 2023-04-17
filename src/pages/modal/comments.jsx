@@ -9,7 +9,7 @@ import React, { useState, useEffect } from 'react';
 import * as S from './styles/styledComment'
 
 
-const Comments = () => {
+const MainNotReg = () => {
     const [text, setText] = useState('');
     const [authorized, setAuthorized] = useState(false);
     const [setComment] = useSetCommentMutation();
@@ -81,4 +81,4 @@ const Comments = () => {
     );
 };
 
-export default Comments
+export default MainNotReg

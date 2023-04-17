@@ -20,6 +20,7 @@ export const AppRoutes = () => {
       <Route path="/salesman/:id" element={<Salesman />} />
       <Route path="/comments/:id" element={<Comments />} />
       <Route path="/comments" element={<Comments />} />
+      <Route path="/product" element={<Product />} />
       <Route element={<ProtectedRoute />}>
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings/:id" element={<Settings />} />

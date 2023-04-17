@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-globals */
 import React, { useState, useEffect } from 'react';
 import { useParams } from "react-router-dom";
 import { Wrapper, GlobalStyle } from './styles/globalStyle';
@@ -54,8 +53,8 @@ const AdvSettings = () => {
     const [addPhoto] = useAddPhotoMutation();
     const [deletePhoto] = useDeletePhotoMutation();
 
-    const handleUploaEditADVT = async (e) => {
-        e.preventDefault();
+    const handleUploaEditADVT = async (event) => {
+        event.preventDefault();
         await refreshToken()
         const userData = { title, description, price, id };
         await editAdvtData(userData)
@@ -63,11 +62,12 @@ const AdvSettings = () => {
         navigate("/profile", { replace: true });
     };
 
-    const handlePhotoClick = async (e) => {
-        e.preventDefault();
-        const parentElement = e.target;
+    const handlePhotoClick = async (event) => {
+        event.preventDefault();
+        const parentElement = event.target;
 
         if (parentElement.tagName === 'IMG') {
+            // eslint-disable-next-line no-restricted-globals
             if (confirm("Вы уверены, что хотите удалить фото?")) {
                 await refreshToken()
                 const imgURL = parentElement.src;
@@ -85,8 +85,8 @@ const AdvSettings = () => {
         }
     };
 
-    const handleProductPictureUpload = async (e) => {
-        const selectedFile = e.target.files[0];
+    const handleProductPictureUpload = async (event) => {
+        const selectedFile = event.target.files[0];
 
         if (!selectedFile) {
             console.log('Файл не выбран');
@@ -145,7 +145,7 @@ const AdvSettings = () => {
     useEffect(() => {
         const addPhotoItem = { image, id }
         addPhoto(addPhotoItem)
-    }, [addPhoto, id, image]);
+    }, [image]);
 
     return (
         <>

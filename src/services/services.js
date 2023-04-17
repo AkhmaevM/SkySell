@@ -28,7 +28,7 @@ export const advtApi = createApi({
 
     registerUser: builder.mutation({
       query: (userData) => ({
-        url: '/auth/register',
+        url: '/auth/signup',
         method: 'POST',
         body: userData
       }),
